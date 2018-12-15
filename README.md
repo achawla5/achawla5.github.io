@@ -61,18 +61,16 @@ Once we have identified features that are strongly correlated such as artist hot
 
 Recommender Systems can be broken down into 3 types:
 
-### Popularity-based: This approach is very naive and would only recommend songs based on how popular it is. The disadvantage of this approach would be that it won’t be personalised and would be the same for each user. However, once we build a personalised recommender system, we would be able to compare our personalised recommender system with a popularity-based  recommender system. 
+#### Popularity-based: This approach is very naive and would only recommend songs based on how popular it is. The disadvantage of this approach would be that it won’t be personalised and would be the same for each user. However, once we build a personalised recommender system, we would be able to compare our personalised recommender system with a popularity-based  recommender system. 
 
-### Collaborative-Filtering: This is a personalised model, and the systems use the actions of users to recommend other items. There are two types of Collaborative-based systems: user-based or item-based. 
+#### Collaborative-Filtering: This is a personalised model, and the systems use the actions of users to recommend other items. There are two types of Collaborative-based systems: user-based or item-based. 
 
 ![alt text](https://cdn-images-1.medium.com/max/1000/1*QvhetbRjCr1vryTch_2HZQ.jpeg)
 (Source: Medium.com)
 
 - User based model uses the patterns of similar users to recommend a product (users like me also looked at these other items). Assuming that similar people have similar taste, if we can find a way to find similarity between different users, and if two users are close in similarity, we can recommend them the same songs. Our clustering model can help us find similar users that we can use for this model.
 
-= Item based model uses the patterns of users who browsed the same item as me to recommend me a product (users who looked at my item also looked at these other items).
-
-
+- Item based model is based on the similarity between items calculated using people's ratings of those items. For example: The model would look for items that are similar to the songs the user has already listened to, and then recommend songs similar to that song. We could look at the songs the user has rated, and then compute the similarity to various songs, and recommend the most similar songs. 
 
 ## Conclusion
 
