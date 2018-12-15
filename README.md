@@ -28,5 +28,15 @@ Furthermore, we would recommend using Jupyter Notebook for this tutorial since P
 The Million Songs Dataset we have is a csv file so we read it in with pandas. The datafile is relatively large so we will look at the first 20 rows rather than the default first 5 given by the head() function. Taking an initial look at the data file we see that there are some immediate issues with the dataset. There is an unnamed column with entries that correspond to the index of each row. There is also some missing data in artist.playmeid with with multiple entries having an id of -1. In the year column, there are multiple rows with entries of 0 all of which are missing data. The songs are identified by song.id rather than song name.
 
 Here's a link where you can go to further understand the dataset, and how different fields are calculated:
+
 https://labrosa.ee.columbia.edu/millionsong/pages/field-list
+
+## Data Cleaning
+
+Cleaning up the dataset is very important prior to any analysis. 
+We know that the unnamed column corresponds to indexing so we can drop that column, then check for any columns that have all data missing. We do this by writing a function that iterates through each row of each column and checks for repeating values.
+
+For our dataset, both energy and danceability have missing values so we'll drop them from our dataset. Additionally we do some further processing on our dataset for better readability.
+
+
 
