@@ -68,7 +68,7 @@ Recommender Systems can be broken down into 3 types:
 
 - User based model uses the patterns of similar users to recommend a product (users like me also looked at these other items). Assuming that similar people have similar taste, if we can find a way to find similarity between different users, and if two users are close in similarity, we can recommend them the same songs. Our clustering model can help us find similar users that we can use for this model.
 
-![alt text](https://github.com/achawla5/achawla5.github.io/master/item-item.png)
+![alt text](https://github.com/achawla5/achawla5.github.io/item-item.png)
 
 - Item based model is based on the similarity between items calculated using people's ratings of those items. For example: The model would look for items that are similar to the songs the user has already listened to, and then recommend songs similar to that song. We could look at the songs the user has rated, and then compute the similarity to various songs, and recommend the most similar songs. 
 
