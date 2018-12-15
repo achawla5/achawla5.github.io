@@ -22,3 +22,11 @@ Since this dataset is approximately 280GB in size, we'll be working with a subse
 - Sklearn is imported for use in the ML section of this tutorial. The KMeans library was specifically imported to partition our data into clusters based on the features we choose 
 
 Furthermore, we would recommend using Jupyter Notebook for this tutorial since Python is already included, and importing all the necessary libraries is very easy.
+
+## Reading in Dataset
+
+The Million Songs Dataset we have is a csv file so we read it in with pandas. The datafile is relatively large so we will look at the first 20 rows rather than the default first 5 given by the head() function. Taking an initial look at the data file we see that there are some immediate issues with the dataset. There is an unnamed column with entries that correspond to the index of each row. There is also some missing data in artist.playmeid with with multiple entries having an id of -1. In the year column, there are multiple rows with entries of 0 all of which are missing data. The songs are identified by song.id rather than song name.
+
+Here's a link where you can go to further understand the dataset, and how different fields are calculated:
+https://labrosa.ee.columbia.edu/millionsong/pages/field-list
+
