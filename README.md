@@ -50,11 +50,19 @@ Random Forests, which is an ensemble of decision trees, helps us extract the mos
 
 ## K-Means Clustering
 
+![alt text](https://cdn-images-1.medium.com/max/1000/1*fG8u8nV7qR91wDyFDEEV-g.png)
+
 Once we have identified features that are strongly correlated such as artist hotness (popularity) and song hotness, the next step would be design a model that could separate the dataset into several clusters (groups). Our goal of using clustering is to organise a collection of patterns into several clusters based on similarity. The points within one cluster are more similar to one another than to every other point from the remaining clusters. We used the K-Means algorithm to cluster our dataset based on artist and song hotness. 
 
 
 
 ## Recommender Systems
+
+Popularity based recommender-system: This approach is very naive and would only recommend songs based on how popular it is. The disadvantage of this approach would be that it won’t be personalised and would be the same for each user. However, once we build a personalised recommender system, we would be able to compare our personalised recommender system with a popularity-based  recommender system. 
+
+Collaborative-Filtering recommender system: This recommender system would be personalised, and we’ll be able to list out the songs a particular user might like based on what similar users have liked.
+
+
 
 ## Conclusion
 
