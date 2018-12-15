@@ -6,6 +6,8 @@ Members - Akash Chawla, Philip Lo, Kishan Segu
 
 Music has become part of many people’s lifestyles over time. It is a form of both personal expression and a kind of social interaction. Music consumption has increased tremendously over the past few years, and a number of companies such as Spotify, Gaana.com, Saavn, Pandora etc. have emerged providing streaming services. With the increasing availability of these streaming services and Bluetooth headsets, we have started to spend more time finding and adding songs to our playlists. By recommending users the music they like, companies are able to lure more customers and thus generate more revenue. With this change in the industry, music recommendations becomes increasingly important for customers in order to lure them into their streaming service. In this notebook, we will analyze and explore the Million Song Dataset, and find relationships between various features. Ultimately, we will also look into recommender systems, and how they're personalized for different individuals based on past history, or finding similar users in such a way that they like similar music.
 
+(![alt text](https://labrosa.ee.columbia.edu/millionsong/sites/default/files/millionsong2-128.jpg)
+
 
 The dataset we are using is the Million song dataset, which is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. The dataset was taken from:
 
@@ -55,12 +57,20 @@ Random Forests, which is an ensemble of decision trees, helps us extract the mos
 Once we have identified features that are strongly correlated such as artist hotness (popularity) and song hotness, the next step would be design a model that could separate the dataset into several clusters (groups). Our goal of using clustering is to organise a collection of patterns into several clusters based on similarity. The points within one cluster are more similar to one another than to every other point from the remaining clusters. We used the K-Means algorithm to cluster our dataset based on artist and song hotness. 
 
 
-
 ## Recommender Systems
 
-Popularity based recommender-system: This approach is very naive and would only recommend songs based on how popular it is. The disadvantage of this approach would be that it won’t be personalised and would be the same for each user. However, once we build a personalised recommender system, we would be able to compare our personalised recommender system with a popularity-based  recommender system. 
+Recommender Systems can be broken down into 3 types:
 
-Collaborative-Filtering recommender system: This recommender system would be personalised, and we’ll be able to list out the songs a particular user might like based on what similar users have liked.
+### Popularity-based: This approach is very naive and would only recommend songs based on how popular it is. The disadvantage of this approach would be that it won’t be personalised and would be the same for each user. However, once we build a personalised recommender system, we would be able to compare our personalised recommender system with a popularity-based  recommender system. 
+
+### Collaborative-Filtering: This is a personalised model, and the systems use the actions of users to recommend other items. There are two types of Collaborative-based systems: user-based or item-based. 
+
+![alt text](https://cdn-images-1.medium.com/max/1000/1*QvhetbRjCr1vryTch_2HZQ.jpeg)
+(Source: Medium.com)
+
+- User based model uses the patterns of similar users to recommend a product (users like me also looked at these other items). Assuming that similar people have similar taste, if we can find a way to find similarity between different users, and if two users are close in similarity, we can recommend them the same songs. Our clustering model can help us find similar users that we can use for this model.
+
+= Item based model uses the patterns of users who browsed the same item as me to recommend me a product (users who looked at my item also looked at these other items).
 
 
 
