@@ -38,5 +38,23 @@ We know that the unnamed column corresponds to indexing so we can drop that colu
 
 For our dataset, both energy and danceability have missing values so we'll drop them from our dataset. Additionally we do some further processing on our dataset for better readability.
 
+Next, we do some Exploratory Data Analysis/Visualization, the plots and explanation of which you can find in our notebook.
 
+Visualizing helped us further understand our dataset, and also learn about some strong correlations between the features.
+
+## Feature Selection using Random Forest
+
+Our dataset has 19 fields, and by looking at them, we don't know if all of them have strong/any correlations, and whether they would be useful when we model our system. Just because we have so many features, it doesn't mean that we have to use all of them for our model. Selecting the most important features, and filtering out the unnecessary ones reduces overfitting, and also enables our model to train faster. Additonally, it makes our model less complex and easier to interpret.
+
+Random Forests, which is an ensemble of decision trees, helps us extract the most important features. Features are chosen by how well they partition the dataset into pure subsets. Features that are higher up in tree have the highest score, and are higher up in the tree. Another important aspect of this algorithm is its randomness. When creating a decision split, the algorithm looks at a random subset of possible features. 
+
+## K-Means Clustering
+
+Once we have identified features that are strongly correlated such as artist hotness (popularity) and song hotness, the next step would be design a model that could separate the dataset into several clusters (groups). Our goal of using clustering is to organise a collection of patterns into several clusters based on similarity. The points within one cluster are more similar to one another than to every other point from the remaining clusters. We used the K-Means algorithm to cluster our dataset based on artist and song hotness. 
+
+
+
+## Recommender Systems
+
+## Conclusion
 
