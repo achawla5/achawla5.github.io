@@ -72,6 +72,23 @@ Recommender Systems can be broken down into 3 types:
 
 - Item based model is based on the similarity between items calculated using people's ratings of those items. For example: The model would look for items that are similar to the songs the user has already listened to, and then recommend songs similar to that song. We could look at the songs the user has rated, and then compute the similarity to various songs, and recommend the most similar songs. 
 
+For modeling an item-item recommender system, we wanted to use Graphlab. However, we ran into some trouble installing it, but here's a link that uses Item-item similarity in graphlab to recommend songs:
+
+https://mouaad.aallam.com/data-mining-recommender-systems/
+
+### Testing Methodology
+
+A success would be the system recommending a list of similar songs. Ideally, we would like to recommend a song to a user using a mixture of content-based, and collaborative filtering system. This would be ideal since we’d be able to recommend a large amount of songs to a particular user, based on both his/her past history, and also recommend songs based on what other similar users have listened to. Based on how our model performs on the collaborative-filtering approach, we’ll decide if we want to add the content-based filtering as well.
+One drawback of using a collaborative-filtering approach is what many call the “Cold Start” problem. If the system hasn’t gathered any information about a particular user, it won’t be able to personalise content for that user. One way to resolve this problem is to force the user to leave a rating when they’re done listening to a particular song.  
+
+### Loss function: 
+
+Our loss function is the difference in the song characteristics of the previous song and the selected song. We need the songs to be similar in order for the music to flow smoothly. If the songs don’t share things like tempo or key, the shift might prove jarring for the listener. Our loss function attempts to solve this problem by minimizing the song difference.
+This loss function is evaluated by comparing the numerical values of each characteristic of the songs. This value is then multiplied by some weight value depending on how important it is to the algorithm. The sum of these values lead to a calculation of difference between the two songs.
+
+            Loss = Sum(| Original song characteristic - Selected song characteristic| * Weight) 
+
+
 ## Conclusion and Future Work
 
 
